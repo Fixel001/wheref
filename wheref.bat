@@ -1,5 +1,7 @@
 @echo off
 
+set currentDir=%cd%
+
 :: Reading variables and changing directory
 if "%~1"=="-a" (
     if "%~3"=="" (
@@ -25,12 +27,19 @@ if "%~2"=="" (
 )
 
 :StrictSearch
+powershell write-host -back DarkGreen -fore Black Algorithm 1
+dir "%folderName%" /o /b /a:d /s
+powershell write-host -back DarkGreen -fore Black Algorithm 2
 dir /o /b /a:d /s | findstr /e /i "%folderName%"
-exit
+powershell write-host -back DarkGreen -fore Black Use the -a option if you still cant find the folder
+powershell write-host -back DarkGreen -fore Black Done.
+goto :EOF 
 
 :LenientSearch
+powershell write-host -back DarkGreen -fore Black Searching for every %folderName% . . .
 dir /o /b /a:d /s | findstr /i "%folderName%"
-exit
+powershell write-host -back DarkGreen -fore Black Done.
+goto :EOF
 
 :help
 echo Usage: wheref [options] [directory] [folderName]
@@ -54,4 +63,7 @@ echo   wheref -a "C:\Users" projectC
 echo     Searches for any instance that matches the folder named "projectC" within "C:\Users"
 echo     and its subdirectories.
 echo.
-exit
+goto :EOF
+
+:EOF
+cd %currentDir%
