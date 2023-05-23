@@ -14,6 +14,7 @@ Syntax | Description
 ---------- | ------------
 `wheref [FolderName]` | search for folder with the FolderName from every folder under **"C:\"** directory
 `wheref [Dir] [FolderName]` | search for folder with the FolderName from every folder under **"\Dir"** directory
+`wheref --help / -h | shows the help menu
 
 ### Specifications
 > Batch script
