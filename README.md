@@ -12,8 +12,8 @@ To be able to use `wheref` in the command prompt
 ## syntax
 Syntax | Description
 ---------- | ------------
-`wheref [FolderName]` | search for folder with the FolderName from every folder under **C:\** directory
-`wheref [Dir] [FolderName]` | search for folder with the FolderName from every folder under **Dir** directory
+`wheref [FolderName]` | search for folder with the FolderName from every folder under **"C:\"** directory
+`wheref [Dir] [FolderName]` | search for folder with the FolderName from every folder under **"\Dir"** directory
 
 ### Specifications
 > Batch script
