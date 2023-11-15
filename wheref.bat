@@ -38,7 +38,7 @@ goto :EOF
 
 :LenientSearch
 powershell write-host -back DarkGreen -fore Black Searching for every %folderOrFileName% . . .
-dir /o /b /a:d /s | findstr /i "%folderOrFileName%"
+dir /o /b /s | findstr /i "%folderOrFileName%"
 powershell write-host -back DarkGreen -fore Black Done.
 goto :EOF
 
