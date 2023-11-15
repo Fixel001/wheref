@@ -28,7 +28,7 @@ if "%~2"=="" (
 
 :StrictSearch
 powershell write-host -back DarkGreen -fore Black Algorithm 1
-dir "%folderOrFileName%" /o /b /a:d /s
+dir "%folderOrFileName%" /o /b /s
 powershell write-host -back DarkGreen -fore Black Algorithm 2
 dir /o /b /s | findstr /e /i "%folderOrFileName%"
 
