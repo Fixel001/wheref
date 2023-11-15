@@ -30,9 +30,8 @@ if "%~2"=="" (
 powershell write-host -back DarkGreen -fore Black Algorithm 1
 dir "%folderOrFileName%" /o /b /a:d /s
 powershell write-host -back DarkGreen -fore Black Algorithm 2
-dir /o /b /a:d /s | findstr /e /i "%folderOrFileName%"
-powershell write-host -back DarkGreen -fore Black Algorithm 3
-dir /b /a-d /s | findstr /e /i "%folderOrFileName%"
+dir /o /b /s | findstr /e /i "%folderOrFileName%"
+
 powershell write-host -back DarkGreen -fore Black Use the -a option if you still cant find the folder
 powershell write-host -back DarkGreen -fore Black Done.
 goto :EOF 
